@@ -15,11 +15,20 @@
   </head>
   <body>
     <canvas id="bg"></canvas>
+
     <div id="start-screen" class="overlay">
       <h1 id="game-title">Mazer3D</h1>
       <p id="leaderboard">Best: 120s</p>
       <button id="start-button">Start Game</button>
     </div>
+
+    <div id="success-screen">
+      <div id="success-content">
+        <h1>You Escaped!</h1>
+        <button id="restart-button">Play Again</button>
+      </div>
+    </div>
+    
     <script type="module" src="main.ts" defer></script>
   </body>
 </html>

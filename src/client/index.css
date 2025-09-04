@@ -26,6 +26,8 @@ body {
   z-index: 1;
 }
 
+/*START start-screen styles */
+
 /* Overlay container sitting above the canvas */
 #start-screen, .overlay {
   position: absolute;
@@ -86,3 +88,69 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
   background: linear-gradient(135deg, #ff6a00, #ffa500);
 }
+
+/*END start-screen styles */
+
+
+
+/* START success-screen styles */
+
+#success-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #2c1b00, #774300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 9999;
+}
+
+#success-screen.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#success-content {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #000;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#success-screen h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 4px;
+  color: #16d301; /* bright but darker than papaya background */
+  text-shadow:
+    0 0 5px #00ff1e,  /* inner glow */
+    0 0 10px #00ff1e, /* medium glow */
+    0 0 20px #2bff00, /* outer glow */
+    0 0 40px #00ff1e; /* soft neon spread */
+}
+
+#restart-button {
+  padding: 0.75rem 1.5rem;
+  background: #ff7f00;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#restart-button:hover {
+  background: #ff9500;
+}
+
+/* END success-screen styles */
